@@ -1,0 +1,34 @@
+.box {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #ff0066;
+  margin: 0;
+}
+
+.example {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  padding-top: 50px;
+}
+
+.button {
+  -webkit-appearance: button;
+  appearance: button;
+  background: #fff;
+  color: #ff0066;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100px;
+}

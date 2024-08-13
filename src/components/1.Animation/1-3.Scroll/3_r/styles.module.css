@@ -1,0 +1,35 @@
+.progress {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  transform: rotate(-90deg);
+}
+
+.bg {
+  stroke: var(--accent);
+  opacity: 0.3;
+}
+
+.indicator {
+  stroke: var(--accent);
+}
+
+.ul {
+  display: flex;
+  list-style: none;
+  height: 300px;
+  overflow-x: scroll;
+  padding: 20px 0;
+  flex: 0 0 600px;
+  margin: 0 auto;
+}
+
+.li {
+  flex: 0 0 200px;
+  background: var(--accent);
+  margin: 0 20px 0 0;
+}
+
+.li:last-of-type {
+  margin: 0;
+}
