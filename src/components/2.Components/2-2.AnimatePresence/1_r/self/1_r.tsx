@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { images } from "./image-data";
+import { wrap } from "popmotion";
 
 type Page = number[];
 
@@ -21,10 +22,12 @@ const CarouselSelf = () => {
     ]);
   };
 
+  const imageIndex = wrap(0, images.length, page);
+
   return (
     <>
       <S.Layout>
-        <motion.img src={images[page]} />
+        <motion.img src={images[imageIndex]} />
         <S.ButtonContainer>
           <S.Button onClick={() => handlePage("prev")}>
             <IoIosArrowBack />
