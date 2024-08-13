@@ -5,7 +5,6 @@ export const Layout = styled.div`
   height: 24rem;
   position: relative;
   overflow: hidden;
-  background: black;
   display: flex;
 
   img {
@@ -25,6 +24,7 @@ export const Button = styled.button`
 `;
 
 export const ButtonContainer = styled.div`
+  z-index: 2;
   width: 100%;
   display: flex;
   justify-content: space-between;
