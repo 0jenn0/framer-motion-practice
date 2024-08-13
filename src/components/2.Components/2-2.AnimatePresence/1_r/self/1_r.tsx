@@ -12,6 +12,8 @@ const DIRECTION = {
   next: 1,
 } as const;
 
+const swipeConfidenceThreshold = 10_000 as const;
+
 const CarouselSelf = () => {
   const [[page, direction], setPage] = useState<Page>([0, 0]);
 
@@ -57,6 +59,16 @@ const CarouselSelf = () => {
           transition={{
             x: { type: "spring", stiffness: 300, damping: 30 },
             opacity: { duration: 0.2 },
+          }}
+          drag="x" // 얘만 있으면
+          dragConstraints={{ left: 0, right: 0 }} // 말그대로 제한값. 이렇게하면 드래그해도 제자리로 돌아온다.
+          onDragEnd={(e, { offset, velocity }) => {
+            const swipe = Math.abs(offset.x) * velocity.x;
+            if (swipe < -swipeConfidenceThreshold) {
+              handlePage("next");
+            } else if (swipe > swipeConfidenceThreshold) {
+              handlePage("prev");
+            }
           }}
         />
         <S.ButtonContainer>
