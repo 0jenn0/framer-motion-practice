@@ -12,6 +12,8 @@ import TransitionComponent3 from "./components/1.Animation/1-4.Transition/3_r/3_
 import TransitionComponent4 from "./components/1.Animation/1-4.Transition/4_r/4_r";
 import AnimatePresenceComponent1 from "./components/2.Components/2-2.AnimatePresence/1_r/1_r";
 import CarouselSelf from "./components/2.Components/2-2.AnimatePresence/1_r/self/1_r";
+import HideSelf from "./components/2.Components/2-2.AnimatePresence/2_r/self/2_r";
+import PopOutSelf from "./components/2.Components/2-2.AnimatePresence/3_r/self/3_r";
 
 export const routePaths = [
   "/",
@@ -29,6 +31,8 @@ export const routePaths = [
   "/transition_4",
   "/animatePresence_1",
   "/animatePresence_1_self",
+  "/animatePresence_2_self",
+  "/animatePresence_3_self",
 ] as const;
 export type ROUTE_PATH = (typeof routePaths)[number];
 
@@ -65,6 +69,8 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
       "/transition_4",
       "/animatePresence_1",
       "/animatePresence_1_self",
+      "/animatePresence_2_self",
+      "/animatePresence_3_self",
     ],
   },
   "/layout_1": {
@@ -150,6 +156,18 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
     link: "/animatePresence_1_self",
     name: "01. animatePresence_self",
     children: CarouselSelf,
+  },
+  "/animatePresence_2_self": {
+    key: "/animatePresence_2_self",
+    link: "/animatePresence_2_self",
+    name: "02. animatePresence_self",
+    children: HideSelf,
+  },
+  "/animatePresence_3_self": {
+    key: "/animatePresence_3_self",
+    link: "/animatePresence_3_self",
+    name: "03. animatePresence_self",
+    children: PopOutSelf,
   },
 };
 
