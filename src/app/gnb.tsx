@@ -71,7 +71,7 @@ const Gnb = () => {
   const currentPath = ["", ...item].join("/") as ROUTE_PATH;
 
   return (
-    <aside>
+    <aside style={{ overflowY: "auto" }}>
       <h1>
         <Link href="/">
           UI 요소 모음 <sub>river</sub>
