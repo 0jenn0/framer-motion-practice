@@ -6,6 +6,7 @@ export const Layout = styled.div`
   position: relative;
   overflow: hidden;
   display: flex;
+  border-radius: 1rem;
 
   img {
     width: 100%;
