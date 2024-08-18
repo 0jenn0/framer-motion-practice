@@ -18,6 +18,7 @@ import ReorderSelf01 from "./components/2.Components/2-6.Reorder/1_r/self/1_r";
 import ReorderSelf02 from "./components/2.Components/2-6.Reorder/2_r/self/2_r";
 import ReorderSelf03 from "./components/2.Components/2-6.Reorder/3_r/self/3_r";
 import ReorderSelf04 from "./components/2.Components/2-6.Reorder/4_r/self/4_r";
+import UseTransformSelf01 from "./components/3.MotionValues/3-6.useTransform/1_r";
 import UseVelocitySelf01 from "./components/3.MotionValues/3-7.useVelocity/1_r";
 
 export const routePaths = [
@@ -43,6 +44,7 @@ export const routePaths = [
   "/reorder_3_self",
   "/reorder_4_self",
   "/useVelocity_1_self",
+  "/useTransform_1_self",
 ] as const;
 export type ROUTE_PATH = (typeof routePaths)[number];
 
@@ -86,6 +88,7 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
       "/reorder_3_self",
       "/reorder_4_self",
       "/useVelocity_1_self",
+      "/useTransform_1_self",
     ],
   },
   "/layout_1": {
@@ -213,6 +216,12 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
     link: "/useVelocity_1_self",
     name: "01. useVelocity_self",
     children: UseVelocitySelf01,
+  },
+  "/useTransform_1_self": {
+    key: "/useTransform_1_self",
+    link: "/useTransform_1_self",
+    name: "01. useTransform_self",
+    children: UseTransformSelf01,
   },
 };
 
