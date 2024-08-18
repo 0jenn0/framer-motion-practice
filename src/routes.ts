@@ -16,6 +16,7 @@ import HideSelf from "./components/2.Components/2-2.AnimatePresence/2_r/self/2_r
 import PopOutSelf from "./components/2.Components/2-2.AnimatePresence/3_r/self/3_r";
 import ReorderSelf01 from "./components/2.Components/2-6.Reorder/1_r/self/1_r";
 import ReorderSelf02 from "./components/2.Components/2-6.Reorder/2_r/self/2_r";
+import ReorderSelf03 from "./components/2.Components/2-6.Reorder/3_r/self/3_r";
 
 export const routePaths = [
   "/",
@@ -37,6 +38,7 @@ export const routePaths = [
   "/animatePresence_3_self",
   "/reorder_1_self",
   "/reorder_2_self",
+  "/reorder_3_self",
 ] as const;
 export type ROUTE_PATH = (typeof routePaths)[number];
 
@@ -77,6 +79,7 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
       "/animatePresence_3_self",
       "/reorder_1_self",
       "/reorder_2_self",
+      "/reorder_3_self",
     ],
   },
   "/layout_1": {
@@ -186,6 +189,12 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
     link: "/reorder_2_self",
     name: "02. reorder_self",
     children: ReorderSelf02,
+  },
+  "/reorder_3_self": {
+    key: "/reorder_3_self",
+    link: "/reorder_3_self",
+    name: "03. reorder_self",
+    children: ReorderSelf03,
   },
 };
 
