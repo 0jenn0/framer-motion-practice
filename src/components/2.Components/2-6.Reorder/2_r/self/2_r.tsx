@@ -98,13 +98,14 @@ const ReorderSelf02 = () => {
               onClick={() => setSelectedIndex(index)}
             >
               <S.Text>{`${item.icon} ${item.label}`}</S.Text>
-              <S.CircleButton
+              <S.RectButton
                 title="delete button"
                 type="button"
                 onClick={(e) => handleDeleteItem(e, item)}
+                whileTap={{ scale: 0.85 }}
               >
                 <IoIosClose />
-              </S.CircleButton>
+              </S.RectButton>
             </S.MotionReorderItem>
           ))}
         </S.MotionReorderList>
@@ -112,6 +113,7 @@ const ReorderSelf02 = () => {
           title="add button"
           type="button"
           onClick={handleAddItem}
+          whileTap={{ scale: 0.85 }}
         >
           <HiOutlinePlusSmall />
         </S.CircleButton>

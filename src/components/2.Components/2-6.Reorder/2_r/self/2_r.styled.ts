@@ -13,50 +13,66 @@ export const Layout = styled.div`
 export const Header = styled.div`
   with: 100%;
   gap: 0.6rem;
+  padding-right: 0.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: green;
+  background: #fff;
+  padding: 0.4rem 0.4rem 0 0.4rem;
 `;
 
-export const CircleButton = styled.button`
-  width: 2rem;
-  height: 2rem;
+export const CircleButton = styled(motion.button)`
   border-radius: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #ededed;
+  padding: 0.4rem;
+  font-size: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
-  color: #fff;
+  color: #000;
+  cursor: pointer;
+`;
+
+export const RectButton = styled(motion.button)`
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  padding: 0.3rem;
+  border-radius: 0.4rem;
   cursor: pointer;
 `;
 
 export const MotionReorderList = styled(Reorder.Group)`
   display: flex;
-  flex: 1;
+  width: 100%;
   justify-content: flex-star;
-  gap: 0.4rem;
+  align-items: center;
   overflow-x: auto;
   padding: 0;
-  margin: 0.4rem 0 0 0.4rem;
+  margin: 0;
 `;
 
 export const Text = styled.div`
   display: flex;
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 800;
 `;
 
 export const MotionReorderItem = styled(Reorder.Item)<{ isSelected: boolean }>`
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.6rem;
   color: #000;
-  background: ${({ isSelected }) => (isSelected ? "white" : "yellow")};
+  background: ${({ isSelected }) => (isSelected ? "#ededed" : "#fff")};
   padding: 0.4rem 0.8rem;
   cursor: pointer;
+  border-radius: 0.4rem 0.4rem 0 0;
+  min-width: 8rem;
 `;
 
 export const MotionContent = styled(motion.div)`
