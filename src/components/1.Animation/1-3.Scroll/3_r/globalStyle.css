@@ -16,14 +16,6 @@
   --accent: var(--white);
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--background);
-  color: var(--accent);
-  padding-bottom: 100px;
-}
-
 #root {
   position: absolute;
   top: 0;
