@@ -1,23 +1,27 @@
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
 export const Layout = styled.div`
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 2rem;
+  align-items: center;
   width: 100%;
   min-height: 40rem;
+
+  scroll-snap-align: start;
+  perspective: 500px;
 `;
 
 export const Image = styled.img`
-  width: 16rem;
-  height: auto;
+  width: 20rem;
 `;
 
-export const Text = styled.div`
+export const MotionText = styled(motion.div)`
   font-size: 5rem;
   font-weight: 700;
   color: #fff;
-  margin-left: -4rem;
   z-index: 1;
+
+  margin-left: -1rem;
 `;
