@@ -22,6 +22,7 @@ import UseMotionTemplateSelf01 from "./components/3.MotionValues/3-1.useMotionTe
 import UseScrollSelf01 from "./components/3.MotionValues/3-3.useScroll/1_r/1_r";
 import UseScrollSelf02 from "./components/3.MotionValues/3-3.useScroll/2_r/2_r";
 import UseScrollSelf03 from "./components/3.MotionValues/3-3.useScroll/3_r/3_r";
+import UseScrollSelf04 from "./components/3.MotionValues/3-3.useScroll/4_r/4_r";
 import UseTransformSelf01 from "./components/3.MotionValues/3-6.useTransform/1_r";
 import UseVelocitySelf01 from "./components/3.MotionValues/3-7.useVelocity/1_r";
 
@@ -53,6 +54,7 @@ export const routePaths = [
   "/useScroll_1_self",
   "/useScroll_2_self",
   "/useScroll_3_self",
+  "/useScroll_4_self",
 ] as const;
 export type ROUTE_PATH = (typeof routePaths)[number];
 
@@ -101,6 +103,7 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
       "/useScroll_1_self",
       "/useScroll_2_self",
       "/useScroll_3_self",
+      "/useScroll_4_self",
     ],
   },
   "/layout_1": {
@@ -258,6 +261,12 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
     link: "/useScroll_3_self",
     name: "03. useScroll_3_self",
     children: UseScrollSelf03,
+  },
+  "/useScroll_4_self": {
+    key: "/useScroll_4_self",
+    link: "/useScroll_4_self",
+    name: "04. useScroll_4_self",
+    children: UseScrollSelf04,
   },
 };
 
