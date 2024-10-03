@@ -26,6 +26,8 @@ import UseScrollSelf04 from "./components/3.MotionValues/3-3.useScroll/4_r/4_r";
 import useTimeSelf01 from "./components/3.MotionValues/3-5. useTime/1_r";
 import UseTransformSelf01 from "./components/3.MotionValues/3-6.useTransform/1_r";
 import UseVelocitySelf01 from "./components/3.MotionValues/3-7.useVelocity/1_r";
+import useAnimateSelf01 from "./components/4.Hooks/4-1.useAnimate/1_r";
+import UseAnimationFrameSelf01 from "./components/4.Hooks/4-2.useAnimateFrame/1_r";
 
 export const routePaths = [
   "/",
@@ -57,6 +59,8 @@ export const routePaths = [
   "/useScroll_3_self",
   "/useScroll_4_self",
   "/useTime_1_self",
+  "/useAnimate_1_self",
+  "/useAnimateFrame_1_self",
 ] as const;
 export type ROUTE_PATH = (typeof routePaths)[number];
 
@@ -107,6 +111,8 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
       "/useScroll_3_self",
       "/useScroll_4_self",
       "/useTime_1_self",
+      "/useAnimate_1_self",
+      "/useAnimateFrame_1_self",
     ],
   },
   "/layout_1": {
@@ -276,6 +282,18 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
     link: "/useTime_1_self",
     name: "01. useTime_1_self",
     children: useTimeSelf01,
+  },
+  "/useAnimate_1_self": {
+    key: "/useAnimate_1_self",
+    link: "/useAnimate_1_self",
+    name: "01. useAnimate_1_self",
+    children: useAnimateSelf01,
+  },
+  "/useAnimateFrame_1_self": {
+    key: "/useAnimateFrame_1_self",
+    link: "/useAnimateFrame_1_self",
+    name: "01. useAnimateFrame_1_self",
+    children: UseAnimationFrameSelf01,
   },
 };
 
